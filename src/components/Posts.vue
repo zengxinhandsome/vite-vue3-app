@@ -1,13 +1,14 @@
 <script setup>
 import { ref } from 'vue';
 import axios from 'axios';
+import { REQUEST_URL } from '../constants';
 
 let posts = ref([]);
 
-const baseUrl = 'https://express-typeorm-demo.herokuapp.com'
+// console.log('import.meta.env: ', import.meta.env.VITE_SOME_KEY);
 
 axios({
-  url: `${baseUrl}/posts`,
+  url: `${REQUEST_URL}/posts`,
   method: 'GET'
 }).then(({ data }) => {
   posts.value = data;
@@ -25,7 +26,7 @@ axios({
 // });
 
 // axios({
-//   url: 'http://localhost:3001/post/create',
+//   url: `${REQUEST_URL}/post/create`,
 //   method: 'POST',
 //   data: {
 //     title: 'My first title',

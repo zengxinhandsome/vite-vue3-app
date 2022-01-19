@@ -1,5 +1,6 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-require('dotenv').config();
+
+console.log('main');
 
 createApp(App).mount('#app');
