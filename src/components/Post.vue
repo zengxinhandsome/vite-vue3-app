@@ -1,11 +1,9 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, computed } from 'vue';
 import axios from 'axios';
 import { REQUEST_URL } from '../constants';
 
-let posts = ref([]);
-
-// console.log('import.meta.env: ', import.meta.env.VITE_SOME_KEY);
+const posts = ref([]);
 
 axios({
   url: `${REQUEST_URL}/posts`,
@@ -39,4 +37,5 @@ axios({
 
 <template>
   <div>{{ posts }}</div>
+  <div>asdjkashdkjashdj</div>
 </template>
