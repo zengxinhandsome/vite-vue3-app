@@ -1,7 +1,7 @@
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted, computed } from 'vue';
 import axios from 'axios';
-import { REQUEST_URL } from '../constants';
+import { REQUEST_URL } from '@/utils/constants';
 
 const posts = ref([]);
 
@@ -37,5 +37,4 @@ axios({
 
 <template>
   <div>{{ posts }}</div>
-  <div>asdjkashdkjashdj</div>
 </template>
